@@ -1,84 +1,311 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>The Picnic Story | Menu</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Link your downloaded CSS here (same file as before) -->
-  <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beige Restaurant Menu</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="boho-header">
-    <h1>The Picnic Story <span class="boho-flourish">🌸</span></h1>
-    <p class="subtitle">A Boho Picnic Experience</p>
-  </header>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="header__title">BEIGE RESTAURANT MENU</h1>
+            <p class="header__subtitle">Delicious Food & Refreshing Beverages</p>
+        </div>
+    </header>
 
-  <main>
-    <section class="menu-section">
-      <h2>BEVERAGES</h2>
-      <ul>
-        <li>Masala Chai</li>
-        <li>Green Tea</li>
-        <li>Black Coffee</li>
-        <li>Iced Latte</li>
-        <li>Lemonade Cooler</li>
-        <li>Mango Lassi</li>
-        <li>Chocolate Shake</li>
-      </ul>
-    </section>
-    <section class="menu-section">
-      <h2>BREAKFAST</h2>
-      <ul>
-        <li>Classic Omelette (Plain / Masala)</li>
-        <li>Aloo Paratha</li>
-        <li>Veg Sandwich</li>
-        <li>Cheese Grilled Toast</li>
-        <li>Egg Bhurji</li>
-        <li>Maggi—Masala / Cheese</li>
-      </ul>
-    </section>
-    <section class="menu-section">
-      <h2>ALL DAY SNACKS</h2>
-      <ul>
-        <li>French Fries</li>
-        <li>Onion Pakoda</li>
-        <li>Bun Maska</li>
-        <li>Panner Fingers</li>
-        <li>Veg Burger</li>
-      </ul>
-    </section>
-    <section class="menu-section">
-      <h2>LARGE PLATES</h2>
-      <ul>
-        <li>Hakka Noodles</li>
-        <li>Fried Rice (Veg / Egg)</li>
-        <li>Chilli Garlic Noodles</li>
-        <li>Pav Bhaji</li>
-      </ul>
-    </section>
-    <section class="menu-section">
-      <h2>SMALL PLATES</h2>
-      <ul>
-        <li>Chilli Potato</li>
-        <li>Veg Manchurian</li>
-        <li>Egg Roll</li>
-        <li>Paneer Tikka</li>
-      </ul>
-    </section>
-    <section class="menu-section">
-      <h2>REGIONAL PLATES</h2>
-      <ul>
-        <li>Butter Chicken</li>
-        <li>Dal Makhani</li>
-        <li>Phulka Roti</li>
-        <li>Jeera Rice</li>
-        <li>Paneer Masala</li>
-      </ul>
-    </section>
-  </main>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="navbar__content">
+                <div class="navbar__search">
+                    <input type="text" id="searchInput" placeholder="Search menu items..." class="search-input">
+                </div>
+                <ul class="navbar__menu">
+                    <li><a href="#beverages" class="nav-link">Beverages</a></li>
+                    <li><a href="#breakfast" class="nav-link">Breakfast</a></li>
+                    <li><a href="#snacks" class="nav-link">All Day Snacks</a></li>
+                    <li><a href="#large-plates" class="nav-link">Large Plates</a></li>
+                    <li><a href="#small-plates" class="nav-link">Small Plates</a></li>
+                    <li><a href="#regional" class="nav-link">Regional Plates</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-  <footer class="boho-footer">
-    <p>Enjoy your picnic! &mdash; The Picnic Story Team 🌷</p>
-  </footer>
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            
+            <!-- Beverages Section -->
+            <section id="beverages" class="menu-section">
+                <h2 class="section-title">BEVERAGES</h2>
+                
+                <div class="subsection-grid">
+                    <div class="menu-card">
+                        <h3 class="subsection-title">TEA</h3>
+                        <ul class="menu-list">
+                            <li class="menu-item">Ginger Tea</li>
+                            <li class="menu-item">Black Tea</li>
+                            <li class="menu-item">Masala Tea</li>
+                            <li class="menu-item">Elaichi Tea</li>
+                            <li class="menu-item">Green Tea</li>
+                            <li class="menu-item">Lemon Ginger Tea</li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-card">
+                        <h3 class="subsection-title">COFFEE</h3>
+                        <ul class="menu-list">
+                            <li class="menu-item">Hot Coffee</li>
+                            <li class="menu-item">Americano</li>
+                            <li class="menu-item">Cold Coffee</li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-card">
+                        <h3 class="subsection-title">COOLERS</h3>
+                        <ul class="menu-list">
+                            <li class="menu-item">Ice Tea</li>
+                            <li class="menu-item">Virgin Mojito</li>
+                            <li class="menu-item">Fresh Lime</li>
+                            <li class="menu-item">Lemonade</li>
+                            <li class="menu-item">Blue Lagoon</li>
+                            <li class="menu-item">Watermelon Mojito</li>
+                            <li class="menu-item">Watermelon Lemonade</li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-card">
+                        <h3 class="subsection-title">SHAKES & LASSI</h3>
+                        <ul class="menu-list">
+                            <li class="menu-item">Oreo Shake</li>
+                            <li class="menu-item">KitKat Shake</li>
+                            <li class="menu-item">Chocolate Shake</li>
+                            <li class="menu-item">Sweet Lassi</li>
+                            <li class="menu-item">Salty Lassi</li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-card">
+                        <h3 class="subsection-title">OTHERS</h3>
+                        <ul class="menu-list">
+                            <li class="menu-item">Mineral Water</li>
+                            <li class="menu-item">Soda</li>
+                            <li class="menu-item">Mixers</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Breakfast Section -->
+            <section id="breakfast" class="menu-section">
+                <h2 class="section-title">BREAKFAST</h2>
+                
+                <div class="subsection-grid">
+                    <div class="menu-card">
+                        <h3 class="subsection-title">OMELETTES</h3>
+                        <ul class="menu-list">
+                            <li class="menu-item">Plain Omelette</li>
+                            <li class="menu-item">Cheese Burst Omelette</li>
+                            <li class="menu-item">Chicken Omelette</li>
+                            <li class="menu-item">Bread Omelette</li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-card">
+                        <h3 class="subsection-title">EGG DISHES</h3>
+                        <ul class="menu-list">
+                            <li class="menu-item">Egg Bhurji with Toast</li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-card">
+                        <h3 class="subsection-title">PARATHAS</h3>
+                        <ul class="menu-list">
+                            <li class="menu-item">Aloo Paratha</li>
+                            <li class="menu-item">Aloo Pyaz Paratha</li>
+                            <li class="menu-item">Gobi Paratha</li>
+                            <li class="menu-item">Paneer Paratha</li>
+                            <li class="menu-item">Egg Paratha</li>
+                            <li class="menu-item">Chicken Paratha</li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-card">
+                        <h3 class="subsection-title">SANDWICHES</h3>
+                        <ul class="menu-list">
+                            <li class="menu-item">Garden Fresh Sandwich</li>
+                            <li class="menu-item">Cheese Corn Sandwich</li>
+                            <li class="menu-item">Paneer Tikka Sandwich</li>
+                            <li class="menu-item">Chicken Tikka Sandwich</li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-card">
+                        <h3 class="subsection-title">MAGGI</h3>
+                        <ul class="menu-list">
+                            <li class="menu-item">Plain Maggi</li>
+                            <li class="menu-item">Veg Maggi</li>
+                            <li class="menu-item">Egg & Cheese Maggi</li>
+                            <li class="menu-item">Cheese Maggi</li>
+                            <li class="menu-item">Chicken Maggi</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- All Day Snacks Section -->
+            <section id="snacks" class="menu-section">
+                <h2 class="section-title">ALL DAY SNACKS</h2>
+                
+                <div class="subsection-grid">
+                    <div class="menu-card">
+                        <h3 class="subsection-title">FRIES & SNACKS</h3>
+                        <ul class="menu-list">
+                            <li class="menu-item">Salted Fries</li>
+                            <li class="menu-item">Peri Peri Fries</li>
+                            <li class="menu-item">Mix Fries</li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-card">
+                        <h3 class="subsection-title">PAKODAS</h3>
+                        <ul class="menu-list">
+                            <li class="menu-item">Paneer Pakoda</li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-card">
+                        <h3 class="subsection-title">BUN ITEMS</h3>
+                        <ul class="menu-list">
+                            <li class="menu-item">Bun Maska</li>
+                            <li class="menu-item">Masala Bun</li>
+                            <li class="menu-item">Malai Bun</li>
+                            <li class="menu-item">Anda Bun</li>
+                            <li class="menu-item">Aloo Bun</li>
+                            <li class="menu-item">Keema Bun</li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-card">
+                        <h3 class="subsection-title">FINGER FOODS</h3>
+                        <ul class="menu-list">
+                            <li class="menu-item">Cheesy Crazy</li>
+                            <li class="menu-item">Chicken Chakna</li>
+                            <li class="menu-item">Peanut Masala</li>
+                            <li class="menu-item">Crispy Corn</li>
+                            <li class="menu-item">Loaded Nachos</li>
+                            <li class="menu-item">Chicken Nuggets</li>
+                            <li class="menu-item">Chicken Strips</li>
+                            <li class="menu-item">Chicken Popcorn</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Large Plates Section -->
+            <section id="large-plates" class="menu-section">
+                <h2 class="section-title">LARGE PLATES</h2>
+                
+                <div class="subsection-grid">
+                    <div class="menu-card">
+                        <h3 class="subsection-title">NOODLES</h3>
+                        <ul class="menu-list">
+                            <li class="menu-item">Veg Hakka Noodles</li>
+                            <li class="menu-item">Chilli Garlic Noodles</li>
+                            <li class="menu-item">Egg Noodles</li>
+                            <li class="menu-item">Chicken Noodles</li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-card">
+                        <h3 class="subsection-title">FRIED RICE</h3>
+                        <ul class="menu-list">
+                            <li class="menu-item">Veg Fried Rice</li>
+                            <li class="menu-item">Egg Fried Rice</li>
+                            <li class="menu-item">Chicken Fried Rice</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Small Plates Section -->
+            <section id="small-plates" class="menu-section">
+                <h2 class="section-title">SMALL PLATES</h2>
+                
+                <div class="menu-card menu-card--single">
+                    <ul class="menu-list menu-list--columns">
+                        <li class="menu-item">Honey Chilli Potato</li>
+                        <li class="menu-item">Chilli Mushroom</li>
+                        <li class="menu-item">Chilli Paneer</li>
+                        <li class="menu-item">Veg Manchurian</li>
+                        <li class="menu-item">Chilli Chicken</li>
+                        <li class="menu-item">Crispy Chicken</li>
+                        <li class="menu-item">Chicken Manchurian</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Regional Plates Section -->
+            <section id="regional" class="menu-section">
+                <h2 class="section-title">REGIONAL PLATES</h2>
+                
+                <div class="subsection-grid">
+                    <div class="menu-card">
+                        <h3 class="subsection-title">TANDOOR SPECIALTIES</h3>
+                        <ul class="menu-list">
+                            <li class="menu-item">Paneer Tikka</li>
+                            <li class="menu-item">Paneer Malai Tikka</li>
+                            <li class="menu-item">Mushroom Tikka</li>
+                            <li class="menu-item">Dahi Kebab</li>
+                            <li class="menu-item">Hara Bhara Kebab</li>
+                            <li class="menu-item">Tandoori Chicken</li>
+                            <li class="menu-item">Chicken Tikka</li>
+                            <li class="menu-item">Chicken Malai Tikka</li>
+                            <li class="menu-item">Chicken Seekh Kebab</li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-card">
+                        <h3 class="subsection-title">CURRIES</h3>
+                        <ul class="menu-list">
+                            <li class="menu-item">Paneer Butter Masala</li>
+                            <li class="menu-item">Kadhai Paneer</li>
+                            <li class="menu-item">Dal Makhni</li>
+                            <li class="menu-item">Dal Tadka</li>
+                            <li class="menu-item">Mix Veg</li>
+                            <li class="menu-item">Butter Chicken</li>
+                            <li class="menu-item">Kadhai Chicken</li>
+                            <li class="menu-item">Chicken Curry</li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-card">
+                        <h3 class="subsection-title">BREADS & RICE</h3>
+                        <ul class="menu-list">
+                            <li class="menu-item">Roti</li>
+                            <li class="menu-item">Naan</li>
+                            <li class="menu-item">Garlic Naan</li>
+                            <li class="menu-item">Steamed Rice</li>
+                            <li class="menu-item">Jeera Rice</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Beige Restaurant. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
 </body>
 </html>
