@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Picnic Story - Your Boho Picnic Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Decorative Elements -->
+    <div class="gradient-bg"></div>
+    
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content fade-in">
+                <div class="header__flourish">✧</div>
+                <h1 class="header__title" id="welcomeTitle">Welcome to Your Boho Picnic!</h1>
+                <div class="header__divider">
+                    <span class="divider-leaf">🌸</span>
+                    <span class="divider-line"></span>
+                    <span class="divider-leaf">🌸</span>
+                </div>
+                <p class="header__subtitle">Select your perfect picnic menu</p>
+                <p class="header__description" id="instructions">Choose your food and beverage items from our curated selection</p>
+                <div class="header__flourish">✧</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <div class="menu-wrapper fade-in">
+                <!-- Food Selection Section -->
+                <div class="selection-section" id="foodSection">
+                    <div class="section-header">
+                        <div class="section-icon">🍽️</div>
+                        <h2 class="section-title">Food Selection</h2>
+                        <p class="section-description">Choose your delicious food items</p>
+                    </div>
+                    <div class="selectors-grid" id="foodSelectors">
+                        <!-- Food selectors will be dynamically generated -->
+                    </div>
+                </div>
+
+                <!-- Beverage Selection Section -->
+                <div class="selection-section" id="beverageSection">
+                    <div class="section-header">
+                        <div class="section-icon">🥤</div>
+                        <h2 class="section-title">Beverage Selection</h2>
+                        <p class="section-description">Pick your refreshing drinks</p>
+                    </div>
+                    <div class="selectors-grid" id="beverageSelectors">
+                        <!-- Beverage selectors will be dynamically generated -->
+                    </div>
+                </div>
+
+                <!-- Order Preview -->
+                <div class="preview-card" id="orderPreview">
+                    <div class="preview-header">
+                        <h3 class="preview-title">🌸 Your Picnic Selection</h3>
+                        <p class="preview-description">Here's what you've chosen for your boho picnic experience</p>
+                    </div>
+                    
+                    <div class="preview-content">
+                        <div class="preview-section">
+                            <h4 class="preview-subtitle">
+                                <span class="preview-icon">🍽️</span>
+                                Food Items
+                            </h4>
+                            <ul class="preview-list" id="foodPreview">
+                                <li class="preview-placeholder">Select your food items above</li>
+                            </ul>
+                        </div>
+
+                        <div class="preview-section" id="beveragePreviewSection">
+                            <h4 class="preview-subtitle">
+                                <span class="preview-icon">🥤</span>
+                                Beverages
+                            </h4>
+                            <ul class="preview-list" id="beveragePreview">
+                                <li class="preview-placeholder">Select your beverages above</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="preview-actions">
+                        <button type="button" id="confirmOrderBtn" class="btn btn--primary" disabled>
+                            <span class="btn-icon">✨</span>
+                            Confirm Order
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Thank You Modal -->
+    <div class="modal hidden" id="thankYouModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">🎉 Order Confirmed!</h2>
+                <button type="button" class="modal-close" id="modalCloseBtn">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="thank-you-content">
+                    <div class="thank-you-icon">🌸</div>
+                    <p class="thank-you-message">Thank you for your order! Your boho picnic experience awaits.</p>
+                    
+                    <div class="order-summary">
+                        <h3 class="summary-title">Order Summary</h3>
+                        <div class="summary-content" id="orderSummary">
+                            <!-- Order summary will be populated here -->
+                        </div>
+                    </div>
+                    
+                    <p class="thank-you-note">
+                        We'll prepare everything with love for your perfect picnic experience! 
+                        <em>Stay tuned for updates.</em>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-ornament">✧ ·͙*̩̩͙˚̩̥̩̥*̩̩̥͙ ✧</div>
+                <p class="footer-text">© 2025 The Picnic Story. Creating magical picnic experiences with love.</p>
+                <div class="footer-ornament">✧ ·͙*̩̩͙˚̩̥̩̥*̩̩̥͙ ✧</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

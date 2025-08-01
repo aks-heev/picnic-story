@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Picnic Story - A Boho Picnic Experience</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Decorative Elements -->
+    <div class="gradient-bg"></div>
+    
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content fade-in">
+                <div class="header__flourish">✧</div>
+                <h1 class="header__title">The Picnic Story</h1>
+                <div class="header__divider">
+                    <span class="divider-leaf">🌸</span>
+                    <span class="divider-line"></span>
+                    <span class="divider-leaf">🌸</span>
+                </div>
+                <p class="header__subtitle">A Boho Picnic Experience</p>
+                <p class="header__description">Create a personalized menu link for your guest</p>
+                <div class="header__flourish">✧</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <div class="form-wrapper fade-in">
+                <div class="form-card">
+                    <div class="form-header">
+                        <h2 class="form-title">Create Personalized Menu</h2>
+                        <p class="form-description">Fill in the details below to generate a custom menu link for your guest</p>
+                    </div>
+                    
+                    <form id="linkGeneratorForm" class="form">
+                        <div class="form-group">
+                            <label for="guestName" class="form-label">
+                                <span class="label-icon">👤</span>
+                                Guest Name
+                            </label>
+                            <input 
+                                type="text" 
+                                id="guestName" 
+                                name="guestName" 
+                                class="form-control"
+                                placeholder="Enter guest's name"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="foodItems" class="form-label">
+                                    <span class="label-icon">🍽️</span>
+                                    Number of Food Items
+                                </label>
+                                <input 
+                                    type="number" 
+                                    id="foodItems" 
+                                    name="foodItems" 
+                                    class="form-control"
+                                    min="1" 
+                                    max="20" 
+                                    value="3"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="bevItems" class="form-label">
+                                    <span class="label-icon">🥤</span>
+                                    Number of Beverage Items
+                                </label>
+                                <input 
+                                    type="number" 
+                                    id="bevItems" 
+                                    name="bevItems" 
+                                    class="form-control"
+                                    min="0" 
+                                    max="10" 
+                                    value="2"
+                                    required
+                                >
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn--primary">
+                            <span class="btn-icon">✨</span>
+                            Generate Link
+                        </button>
+                    </form>
+
+                    <!-- Generated Link Section -->
+                    <div id="linkResult" class="link-result hidden">
+                        <div class="result-header">
+                            <h3 class="result-title">🎉 Your personalized link is ready!</h3>
+                            <p class="result-description">Share this link with your guest</p>
+                        </div>
+                        
+                        <div class="link-display">
+                            <input type="text" id="generatedLink" class="link-input" readonly>
+                            <button type="button" id="copyBtn" class="btn btn--secondary">
+                                <span class="btn-icon">📋</span>
+                                Copy
+                            </button>
+                        </div>
+                        
+                        <div class="result-actions">
+                            <button type="button" id="createNewBtn" class="btn btn--outline">
+                                Create Another Link
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-ornament">✧ ·͙*̩̩͙˚̩̥̩̥*̩̩̥͙ ✧</div>
+                <p class="footer-text">© 2025 The Picnic Story. Creating magical picnic experiences with love.</p>
+                <div class="footer-ornament">✧ ·͙*̩̩͙˚̩̥̩̥*̩̩̥͙ ✧</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
