@@ -1,60 +1,39 @@
-/* ============================= */
-/* The Picnic Story – Menu Boho Theme CSS */
-/* ============================= */
-
 :root {
-  /* Boho Picnic Brand Colors */
+  /* Boho color palette */
   --color-white: #fff;
-  --color-black: #1c1b18;
   --color-blush-50: #fdf6f9;
   --color-blush-100: #fdeff2;
   --color-blush-200: #fadbe5;
   --color-blush-300: #f7c2d0;
   --color-peach: #ffe7d6;
   --color-cream: #fff9f3;
-  --color-gold-accent: #eec58a;
   --color-sage: #e7ede5;
-  --color-green: #c6dbc6;
-  --color-beige-light: #f6e3db;
-  --color-brown: #bfa58a;
+  --color-gold: #eec58a;
   --color-muted-pink: #eec4d2;
   --color-gray: #7e7970;
-
-  /* Gradient Background */
-  --color-boho-gradient: linear-gradient(120deg, #fdeff2 0%, #fadbe5 40%, #eec4d2 100%);
-
-  /* Semantic Tokens */
-  --color-background: var(--color-blush-50);
-  --color-surface: var(--color-white);
   --color-text: #42403e;
   --color-text-secondary: #9f948e;
-  --color-primary: #5c484e;
+  --color-primary: #eec4d2;
   --color-primary-hover: #fadbe5;
-  --color-secondary: #ffe7d6;
   --color-border: #f3d9dd;
-
-  /* Typography */
+  --color-boho-gradient: linear-gradient(120deg, #fdeff2 0%, #fadbe5 40%, #eec4d2 100%);
   --font-family-base: 'Inter', sans-serif;
   --font-family-heading: 'Playfair Display', serif;
   --font-size-base: 15px;
   --font-size-lg: 18px;
   --font-size-xl: 24px;
   --font-size-2xl: 34px;
-
-  /* Border & Shadow */
-  --radius-base: 12px;
+  --radius-base: 14px;
   --radius-full: 9999px;
-  --shadow-card: 0 2px 20px rgba(224,185,197,0.09), 0 1.5px 7px rgba(213,159,179,0.07);
-
-  /* Spacing */
+  --shadow-card: 0 2px 16px 0 rgba(215,181,196,0.11), 0 1.5px 7px 0 rgba(213,159,179,0.09);
   --space-8: 8px;
+  --space-12: 12px;
   --space-16: 16px;
   --space-24: 24px;
   --space-32: 32px;
   --space-40: 40px;
 }
 
-/* Base Styles */
 html {
   font-size: var(--font-size-base);
   font-family: var(--font-family-base);
@@ -62,18 +41,28 @@ html {
   color: var(--color-text);
   scroll-behavior: smooth;
 }
+
 body {
   margin: 0;
   padding: var(--space-24);
 }
-* {
-  box-sizing: border-box;
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-left: var(--space-16);
+  padding-right: var(--space-16);
 }
 
 /* Header */
 .header {
   text-align: center;
   padding: var(--space-32) 0 var(--space-24);
+  background: var(--color-boho-gradient);
+  border-bottom-left-radius: var(--radius-full);
+  border-bottom-right-radius: var(--radius-full);
+  box-shadow: var(--shadow-card);
+  margin-bottom: var(--space-32);
 }
 .restaurant-name {
   font-family: var(--font-family-heading);
@@ -87,110 +76,169 @@ body {
   font-style: italic;
 }
 
-/* Navigation Pills */
-.nav-pill {
-  background: var(--color-surface);
-  color: var(--color-primary);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-full);
-  padding: var(--space-8) var(--space-16);
-  margin: var(--space-8) var(--space-4);
-  cursor: pointer;
-  transition: background 0.25s;
+/* Navigation */
+.navigation.sticky {
+  background-color: var(--color-white);
+  border-bottom: 1.5px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-radius: var(--radius-base);
+  box-shadow: var(--shadow-card);
+  margin-bottom: var(--space-32);
+  padding: var(--space-12) 0;
 }
-.nav-pill.active,
-.nav-pill:hover {
-  background: var(--color-primary-hover);
-  color: var(--color-black);
+.nav-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-8);
 }
-
-/* Search Input */
 .search-input {
+  min-width: 250px;
   width: 100%;
   max-width: 400px;
   padding: var(--space-8) var(--space-16);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-full);
-  margin: var(--space-16) 0;
+  background-color: var(--color-blush-100);
+  font-size: var(--font-size-base);
+  color: var(--color-gray);
+  transition: border-color 0.2s;
+}
+.search-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+.nav-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-8);
+}
+.nav-pill {
+  background: var(--color-white);
+  color: var(--color-primary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  padding: var(--space-8) var(--space-16);
+  margin: 0 var(--space-4);
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+}
+.nav-pill.active,
+.nav-pill:hover {
+  background: var(--color-primary-hover);
+  color: #42403e;
 }
 
-/* Menu Section */
+/* Menu Sections */
 .menu-section {
   margin-bottom: var(--space-40);
+}
+.section-header {
+  text-align: center;
 }
 .section-title {
   font-family: var(--font-family-heading);
   font-size: var(--font-size-xl);
   color: var(--color-primary);
-  text-align: center;
-  margin-bottom: var(--space-24);
+  margin-bottom: var(--space-8);
   position: relative;
 }
-.section-title::after {
-  content: '';
-  display: block;
-  width: 60px;
-  height: 3px;
-  background: var(--color-primary);
-  margin: var(--space-8) auto 0;
-  border-radius: var(--radius-full);
+.section-title .flower {
+  font-size: 1em;
 }
-
-/* Subsection Grid */
-.subsection-grid {
+.section-subtitle {
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-24);
+  font-size: var(--font-size-base);
+  font-style: italic;
+}
+.subsections {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: var(--space-24);
+  margin-top: var(--space-24);
 }
-
-/* Menu Card */
-.menu-card {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
+.subsection-card {
+  background: var(--color-white);
   border-radius: var(--radius-base);
-  padding: var(--space-24);
   box-shadow: var(--shadow-card);
-  transition: box-shadow 0.2s;
+  border: 1px solid var(--color-border);
+  padding: var(--space-24);
+  margin-bottom: var(--space-16);
+  transition: box-shadow 0.2s, transform 0.2s;
 }
-.menu-card:hover {
-  box-shadow: 0 4px 32px rgba(224,185,197,0.16);
+.subsection-card:hover {
+  box-shadow: 0 6px 32px 0 rgba(224,185,197,0.14);
+  transform: translateY(-3px);
 }
-
-/* Subsection Title */
 .subsection-title {
   font-size: var(--font-size-lg);
   color: var(--color-primary);
-  text-align: center;
   margin-bottom: var(--space-16);
+  text-align: center;
 }
 
 /* Menu Items */
-.menu-list {
+.menu-items {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 .menu-item {
-  padding: var(--space-8) var(--space-16);
+  padding: var(--space-8) var(--space-16) var(--space-8) 32px;
   margin-bottom: var(--space-12);
   border-radius: var(--radius-full);
-  background: var(--color-secondary);
+  background: var(--color-blush-200);
   position: relative;
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  transition: background 0.23s, color 0.23s;
+  user-select: none;
+  cursor: pointer;
 }
 .menu-item::before {
-  content: '';
+  content: '🌸';
   position: absolute;
   left: 12px;
   top: 50%;
   transform: translateY(-50%);
+  font-size: 17px;
+  opacity: .85;
 }
 .menu-item:hover {
   background: var(--color-peach);
+  color: #ae667f;
+}
+
+/* Footer */
+.footer {
+  background: var(--color-sage);
+  color: #bfa58a;
+  border-top: 1.5px solid #f6e3db;
+  padding: var(--space-16) 0;
+  text-align: center;
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-base);
+  margin-top: var(--space-32);
 }
 
 /* Responsive */
+@media (max-width: 900px) {
+  .container {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .subsections {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (min-width: 768px) {
-  .subsection-grid {
+  .subsections {
     grid-template-columns: repeat(2, 1fr);
   }
 }
